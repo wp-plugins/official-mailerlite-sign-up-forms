@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Plugin Name: Official MailerLite sign up forms
- * Description: Official MailerLite sign up forms plugin for WordPress. Ability to embed MailerLite webforms and create custom ones just with few clicks.
+ * Plugin Name: Official MailerLite Sign Up Forms
+ * Description: Official MailerLite Sign Up Forms plugin for WordPress. Ability to embed MailerLite webforms and create custom ones just with few clicks.
  * Version: 1.0
  * Author: MailerGroup
  * Author URI: https://www.mailerlite.com
