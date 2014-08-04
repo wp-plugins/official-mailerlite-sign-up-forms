@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: mailerlite
-Donate link: http://example.com/
+Donate link: https://www.mailerlite.com/
 Tags: mailerlite, newsletter, subscribe, form, webform
 Requires at least: 3.0.1
 Tested up to: 3.9
