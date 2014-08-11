@@ -8,19 +8,52 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Official MailerLite sign up forms plugin for WordPress. Ability to embed MailerLite webforms and create custom ones just with few clicks.
+Add newsletter sign up forms to your WordPresss site. Subscribers will be saved directly to your MailerLite account. Super easy to set up!
 
 == Description ==
 
 = Official MailerLite WordPress plugin =
 
-This plugin is a perfect solution for adding MailerLite subscribe form to your WordPress powered website. All you have to do is add a form title, description and press Save. This will create a simple form that collects emails and all other custom fields. Moreover it shows a confirmation message without refreshing the page.
+The Official MailerLite Sign Up Form plugin makes it easy to grow your newsletter subscriber list. Use the plugin to add newsletter sign up form to your Wordpress blog or website and automatically integrate it with your MailerLite account.
+
+If you don't have MailerLite account yet, you can signup for a FREE trial here.
+
+Once you activate the plugin, you'll be able to select and add any of webforms you have in your MailerLite account or create a new webform. Place the webform in the sidebar using widget or put it enywhere in your post with a shortcode.
+
+Setup is fast and easy! You just need to enter your MailerLite account API code and you're all set.
+
+Plugin features:
+
+* Add webforms from your MailerLite account to your Wordpress blog or website
+* Create new webforms
+* Save subscribers automatically to your MailerLite account
+* Place webforms using widget or shortcode
+* Double opt-in signup
+* Setup welcome emails in your MailerLite account
 
 == Installation ==
 
-1. Upload `mailerlite` folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Enter your API key in MailerLite menu section
+= Method 1 =
+
+1. Login to your WordPress admin panel.
+2. Open Plugins in the left sidebar, click Add New, and search for MailerLite plugin.
+3. Install the plugin and activate it.
+
+= Method 2 =
+
+1. Download the MailerLite plugin.
+2. Unzip the downloaded file and upload to your /wp-content/plugins/ folder.
+3. Activate the plugin in Wordpress admin panel.
+
+= Setup =
+
+1. After successful installation you will see MailerLite icon on the left sidebar. Click it.
+2. Enter your MailerLite account API key. You can find it in your MailerLite account by clicking "Developer API" link in the bottom of the page.
+3. Click "Add New Signup Form" .
+4. Choose "Webforms created using MailerLite" if you wan't to use a sign up form that you already created in your MailerLite account or "Custom sign up form" if you want to create it now.
+5. If you want to include sign up form in the sidebar of your blog or website, go to Appearance > Widgets and drag "MailerLite sign up form" to the sidebar. Choose which signup form to display.
+6. If you want to include sign up form inside your post or page, use shortcodes. You will see MailerLite icon in your content editor, click it and choose which form to display. It will put a shortcode (for example [mailerlite_form form_id=1]) and your visitors will see signup form in that place.
+
 
 == Frequently Asked Questions ==
 
@@ -80,7 +113,8 @@ Elements of form can be styled.
 Add your custom CSS rules to the end of your theme stylesheet, /wp-content/themes/your-theme-name/style.css. Do not add them to the plugin stylesheet as they will be automatically overwritten on the next plugin update.
 
 = Where can I find my MailerLite API key? =
-Check it here!
+
+[Check it here!](http://mailerlite.helpscoutdocs.com/article/12-does-mailerlite-offer-an-api "Check it here!")
 
 == Screenshots ==
 
