@@ -128,8 +128,6 @@ Add your custom CSS rules to the end of your theme stylesheet, /wp-content/theme
 
 == Changelog ==
 
-= 1.0.2 =
-* Some problems fixed
 = 1.0.1 =
 * Added translations
 = 1.0 =
@@ -137,8 +135,6 @@ Add your custom CSS rules to the end of your theme stylesheet, /wp-content/theme
 
 == Upgrade Notice ==
 
-= 1.0.2 =
-* Some problems fixed
 = 1.0.1 =
 * Added translations
 = 1.0 =
