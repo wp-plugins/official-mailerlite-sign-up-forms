@@ -26,7 +26,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 define( 'MAILERLITE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'MAILERLITE_PLUGIN_URL', plugins_url( '', __FILE__ ) );
 
-define( 'MAILERLITE_VERSION', '1.0');
+define( 'MAILERLITE_VERSION', '1.0.1');
 
 function mailerlite_load_plugin_textdomain() {
 
