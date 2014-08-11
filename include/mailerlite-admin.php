@@ -49,7 +49,7 @@ class MailerLite_Admin {
 
         add_menu_page('MailerLite', 'MailerLite', 'manage_options', 'mailerlite_main', null, MAILERLITE_PLUGIN_URL . '/assets/image/icon.png');
 
-        add_submenu_page('mailerlite_main', __('Forms', 'mailerlite'), __('Subscription forms', 'mailerlite'), 'manage_options', 'mailerlite_main', array('MailerLite_Admin', 'mailerlite_main'));
+        add_submenu_page('mailerlite_main', __('Forms', 'mailerlite'), __('Signup forms', 'mailerlite'), 'manage_options', 'mailerlite_main', array('MailerLite_Admin', 'mailerlite_main'));
         add_submenu_page('mailerlite_main', __('Settings', 'mailerlite'), __('Settings', 'mailerlite'), 'manage_options', 'mailerlite_settings', array('MailerLite_Admin', 'mailerlite_settings'));
     }
 
@@ -131,7 +131,7 @@ class MailerLite_Admin {
                     if ( isset( $_POST['save_custom_signup_form'] ) )
                     {
                         $form_name          = isset($_POST['form_name']) && $_POST['form_name'] != '' ? sanitize_text_field($_POST['form_name']) : __('Subscribe for newsletter!', 'mailerlite');
-                        $form_title          = isset($_POST['form_title']) && $_POST['form_title'] != '' ? sanitize_text_field($_POST['form_title']) : __('Newsletter subscription', 'mailerlite');
+                        $form_title          = isset($_POST['form_title']) && $_POST['form_title'] != '' ? sanitize_text_field($_POST['form_title']) : __('Newsletter signup', 'mailerlite');
                         $form_description   = isset($_POST['form_description']) && $_POST['form_description'] != '' ? $_POST['form_description'] : __('Just simple MailerLite form!', 'mailerlite');
                         $button_name        = isset($_POST['button_name']) && $_POST['button_name'] != '' ? sanitize_text_field($_POST['button_name']) : __('Subscribe', 'mailerlite');
 
@@ -298,7 +298,7 @@ class MailerLite_Admin {
         {
             $form_name = __('New custom signup form', 'mailerlite');
             $form_data = array(
-                'title'        => __('Newsletter subscription', 'mailerlite'),
+                'title'        => __('Newsletter signup', 'mailerlite'),
                 'description'  => __('Just simple MailerLite form!', 'mailerlite'),
                 'button'       => __('Subscribe', 'mailerlite'),
                 'lists'        => array(),

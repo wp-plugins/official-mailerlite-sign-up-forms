@@ -3,403 +3,406 @@ msgstr ""
 "Project-Id-Version: Official MailerLite sign up forms v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-07-28 12:23:11+0000\n"
+"PO-Revision-Date: 2014-08-11 11:25+0200\n"
 "Last-Translator: admin <ignas@mailerlite.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: CSL v1.x\n"
-"X-Poedit-Language: Lithuanian\n"
-"X-Poedit-Country: LITHUANIA\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 1.6.7\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
-"X-Poedit-Basepath: \n"
-"X-Poedit-Bookmarks: \n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"Language: lt_LT\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Textdomain-Support: yes"
 
+# @ mailerlite
 #: include/mailerlite-admin.php:133
-#@ mailerlite
 msgid "Subscribe for newsletter!"
 msgstr "Užsisakyti naujienlaiškį!"
 
-#: include/mailerlite-admin.php:134
-#: include/mailerlite-admin.php:301
-#@ mailerlite
-msgid "Newsletter subscription"
+# @ mailerlite
+#: include/mailerlite-admin.php:134 include/mailerlite-admin.php:301
+msgid "Newsletter signup"
 msgstr "Naujienlaiškio prenumerata."
 
-#: include/mailerlite-admin.php:135
-#: include/mailerlite-admin.php:302
-#@ mailerlite
+# @ mailerlite
+#: include/mailerlite-admin.php:135 include/mailerlite-admin.php:302
 msgid "Just simple MailerLite form!"
 msgstr "Tai pavizdinė MailerLite prenumeratos forma!"
 
-#: include/mailerlite-admin.php:136
-#: include/mailerlite-admin.php:303
+# @ mailerlite
+# @ default
+#: include/mailerlite-admin.php:136 include/mailerlite-admin.php:303
 #: include/templates/admin/edit_custom.php:55
-#@ mailerlite
-#@ default
 msgid "Subscribe"
 msgstr "Prenumeruoti"
 
-#: include/mailerlite-admin.php:142
-#: include/mailerlite-admin.php:305
-#@ mailerlite
+# @ mailerlite
+#: include/mailerlite-admin.php:142 include/mailerlite-admin.php:305
 msgid "Email"
 msgstr "El. paštas"
 
+# @ mailerlite
 #: include/mailerlite-admin.php:198
-#@ mailerlite
 msgid "Embedded webform"
 msgstr "Sugeneruota forma"
 
+# @ mailerlite
 #: include/mailerlite-admin.php:267
-#@ mailerlite
 msgid "You not allowed to do that"
 msgstr "Šis veiksmas draudžiamas"
 
+# @ mailerlite
 #: include/mailerlite-admin.php:277
-#@ mailerlite
 msgid "Wrong MailerLite API key"
 msgstr "Netesingas MailerLite API raktas"
 
+# @ mailerlite
 #: include/mailerlite-admin.php:299
-#@ mailerlite
 msgid "New custom signup form"
 msgstr "Nauja naujienlaiškio forma"
 
+# @ mailerlite
 #: include/mailerlite-admin.php:310
-#@ mailerlite
 msgid "New embedded signup form"
 msgstr "Nauja integruojama naujienlaiškio forma"
 
+# @ mailerlite
 #: include/mailerlite-widget.php:13
-#@ mailerlite
 msgid "Mailerlite sign up form"
 msgstr "Mailerlite naujienlaiškio forma"
 
+# @ mailerlite
 #: include/mailerlite-widget.php:14
-#@ mailerlite
 msgid "MailerLite sign up form Widget"
 msgstr "MailerLite naujienlaiškio formos skydelis"
 
+# @ mailerlite
 #: include/mailerlite-widget.php:66
-#@ mailerlite
 msgid "Select form:"
 msgstr "Pasirinkite formą:"
 
+# @ mailerlite
 #: include/templates/admin/api_key.php:19
 #: include/templates/admin/settings.php:19
-#@ mailerlite
 msgid "Enter an API key"
 msgstr "Įvesti API raktą"
 
+# @ mailerlite
 #: include/templates/admin/api_key.php:20
 #: include/templates/admin/settings.php:20
-#@ mailerlite
 msgid "Don't know where to find it?"
 msgstr "Nežinote kur jį rasti?"
 
+# @ mailerlite
 #: include/templates/admin/api_key.php:20
 #: include/templates/admin/settings.php:20
-#@ mailerlite
 msgid "Check it here!"
 msgstr "Pažiūrėkite!"
 
+# @ mailerlite
 #: include/templates/admin/api_key.php:25
 #: include/templates/admin/settings.php:25
-#@ mailerlite
 msgid "Save this key"
 msgstr "Išsaugoti raktą"
 
+# @ mailerlite
 #: include/templates/admin/api_key.php:31
 #: include/templates/admin/settings.php:31
-#@ mailerlite
 msgid "Don't have an account?"
 msgstr "Neturite paskiros?"
 
+# @ mailerlite
 #: include/templates/admin/api_key.php:32
 #: include/templates/admin/settings.php:32
-#@ mailerlite
 msgid "Register!"
 msgstr "Užsiregistruokite!"
 
+# @ mailerlite
 #: include/templates/admin/create.php:11
-#@ mailerlite
 msgid "Form type"
 msgstr "Formos tipas"
 
+# @ mailerlite
 #: include/templates/admin/create.php:23
-#@ mailerlite
 msgid "Webforms created using MailerLite"
 msgstr "Formos sukurtos naudojantis MailerLite"
 
+# @ mailerlite
 #: include/templates/admin/create.php:28
-#@ mailerlite
 msgid "Create form"
 msgstr "Sukurti formą"
 
+# @ mailerlite
 #: include/templates/admin/create.php:29
 #: include/templates/admin/edit_custom.php:96
 #: include/templates/admin/edit_embedded.php:42
-#@ mailerlite
 msgid "Back"
 msgstr "Atgal"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:21
 #: include/templates/admin/edit_embedded.php:21
-#@ mailerlite
 msgid "Tip:"
 msgstr "Pastaba:"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:21
 #: include/templates/admin/edit_embedded.php:21
-#@ mailerlite
 msgid "This title won't be displayed in public!"
 msgstr "Šio pavadinimo niekas nematys"
 
+# @ mailerlite
+# @ default
 #: include/templates/admin/edit_custom.php:34
 #: include/templates/admin/edit_custom.php:55
-#@ mailerlite
-#@ default
 msgid "Example:"
 msgstr "Pavizdys:"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:34
-#@ mailerlite
-msgid "Newsletter subscription!"
+msgid "Newsletter signup!"
 msgstr "Naujienlaiškio prenumerata!"
 
+# @ mailerlite
 #: include/templates/admin/edit_embedded.php:15
-#@ mailerlite
 msgid "Webform details"
 msgstr "Formos informacija"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:33
 #: include/templates/admin/edit_embedded.php:20
-#@ mailerlite
 msgid "Form title"
 msgstr "Formos pavadinimas"
 
+# @ mailerlite
 #: include/templates/admin/main.php:30
-#@ mailerlite
 msgid "Are you sure you want to delete this form?"
 msgstr "Ar tikrai norite ištrinti šią formą?"
 
+# @ mailerlite
 #: include/templates/admin/settings.php:10
-#@ mailerlite
 msgid "Here you able to change your API key!"
 msgstr "Čia jūs galite pasikeisti API raktą!"
 
+# @ mailerlite
 #: include/templates/admin/sidebar.php:4
-#@ mailerlite
 msgid "Need help?"
 msgstr "Reikia pagalbos?"
 
+# @ mailerlite
 #: include/templates/admin/sidebar.php:6
-#@ mailerlite
-msgid "Have any questions? Stuck on something or found bug? Feel free to contact us!"
-msgstr "Turite klausimų? Kažko nesuprantate ar radote klaidą? Susisiekite su mumis!"
+msgid ""
+"Have any questions? Stuck on something or found bug? Feel free to contact us!"
+msgstr ""
+"Turite klausimų? Kažko nesuprantate ar radote klaidą? Susisiekite su mumis!"
 
+# @ mailerlite
 #: include/templates/admin/api_key.php:10
-#@ mailerlite
-msgid "Hi there! You will be able to create awesome subscription forms, but first we need your MailerLite API key!"
-msgstr "Sveiki! Čia galėsite susikurti nuostabias naujienlaiškių prenumeratos formas, bet prieš tai turite įvesti MailerLite API raktą!"
+msgid ""
+"Hi there! You will be able to create awesome signup forms, but first we need "
+"your MailerLite API key!"
+msgstr ""
+"Sveiki! Čia galėsite susikurti nuostabias naujienlaiškių prenumeratos "
+"formas, bet prieš tai turite įvesti MailerLite API raktą!"
 
+# @ mailerlite
 #: include/templates/admin/create.php:17
-#@ mailerlite
-msgid "Custom subscription form"
+msgid "Custom signup form"
 msgstr "Pritaikyta prenumeratos forma"
 
+# @ mailerlite
 #: include/templates/admin/main.php:14
-#@ mailerlite
 msgid "ID"
 msgstr "ID"
 
+# @ mailerlite
 #: include/templates/admin/main.php:16
-#@ mailerlite
 msgid "Type"
 msgstr "Tipas"
 
+# @ mailerlite
 #: include/templates/admin/main.php:17
-#@ mailerlite
 msgid "Date"
 msgstr "Data"
 
+# @ mailerlite
 #: include/templates/admin/main.php:33
-#@ mailerlite
 msgid "Custom form"
 msgstr "Pritaikyta forma"
 
+# @ mailerlite
 #: include/templates/admin/main.php:33
-#@ mailerlite
 msgid "Embedded form"
 msgstr "Integruojama forma"
 
+# @ mailerlite
 #: include/templates/admin/main.php:42
-#@ mailerlite
-msgid "There is no subscription forms created yet!"
+msgid "There is no signup forms created yet!"
 msgstr "Nėra sukurtų prenumeratos formų!"
 
+# @ mailerlite
 #: include/templates/admin/main.php:43
-#@ mailerlite
-msgid "Create subscription form"
+msgid "Create signup form"
 msgstr "Sukurti prenumeratos formą"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:7
 #: include/templates/admin/edit_embedded.php:7
-#@ mailerlite
 msgid "Form saved."
 msgstr "Forma išsaugota."
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:7
 #: include/templates/admin/edit_embedded.php:7
-#@ mailerlite
 msgid "Back to forms list"
 msgstr "Grįšti į formų sąrašą"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:15
-#@ mailerlite
 msgid "Main information"
 msgstr "Pagrindinė informacija"
 
+# @ default
 #: include/templates/admin/edit_custom.php:20
-#@ default
 msgid "Form name"
-msgstr ""
+msgstr "Formos pavadinimas"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:28
-#@ mailerlite
 msgid "Form details"
 msgstr "Formos detalės"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:37
-#@ mailerlite
 msgid "Form description"
 msgstr "Formos aprašymas"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:54
-#@ mailerlite
 msgid "Button title"
 msgstr "Mygtuko antraštė"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:62
-#@ mailerlite
 msgid "Form fields and lists"
 msgstr "Formos laukeliai ir sąrašai"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:67
-#@ mailerlite
 msgid "Fields"
 msgstr "Laukeliai"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:80
-#@ mailerlite
 msgid "Lists"
 msgstr "Sąrašai"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:95
 #: include/templates/admin/edit_embedded.php:41
-#@ mailerlite
 msgid "Save form"
 msgstr "Išsaugoti formą"
 
+# @ mailerlite
 #: include/templates/admin/edit_embedded.php:24
-#@ mailerlite
 msgid "Webform"
 msgstr "Forma"
 
+# @ mailerlite
 #: include/templates/admin/main.php:15
-#@ mailerlite
 msgid "Name"
 msgstr "Pavadinimas"
 
+# @ mailerlite
 #: include/templates/admin/main.php:29
-#@ mailerlite
 msgid "Edit"
 msgstr "Redaguoti"
 
+# @ mailerlite
 #: include/templates/admin/main.php:30
-#@ mailerlite
 msgid "Delete"
 msgstr "Ištrinti"
 
+# @ mailerlite
 #: include/mailerlite-admin.php:52
-#@ mailerlite
 msgid "Forms"
 msgstr "Formos"
 
-#: include/mailerlite-admin.php:52
-#: include/templates/admin/main.php:5
-#@ mailerlite
-msgid "Subscription forms"
+# @ mailerlite
+#: include/mailerlite-admin.php:52 include/templates/admin/main.php:5
+msgid "Signup forms"
 msgstr "Prenumeratos formos"
 
+# @ mailerlite
 #: include/mailerlite-admin.php:53
-#@ mailerlite
 msgid "Settings"
 msgstr "Nustatymai"
 
+# @ mailerlite
 #: include/templates/admin/main.php:5
-#@ mailerlite
 msgid "Add New"
 msgstr "Pridėti naują"
 
+# @ mailerlite
 #: include/mailerlite-form.php:75
-#@ mailerlite
 msgid "Subscriber successfully saved"
 msgstr "Sėkmingai užprenumruota."
 
+# @ mailerlite
 #: include/mailerlite-form.php:79
-#@ mailerlite
 msgid "Form not found"
 msgstr "Forma nerasta"
 
+# @ mailerlite
 #: include/mailerlite-form.php:84
-#@ mailerlite
 msgid "Wrong data provided"
 msgstr "Neteisinga informacija"
 
+# @ mailerlite
 #: include/templates/admin/create.php:5
-#@ mailerlite
-msgid "Create new signup form"
+msgid "Add signup form"
 msgstr "Sukurti naują prenumeratos formą"
 
+# @ mailerlite
 #: include/templates/admin/edit_custom.php:5
-#@ mailerlite
 msgid "Edit custom signup form"
 msgstr "Redaguoti pritaikomą prenumeratos formą"
 
+# @ mailerlite
 #: include/templates/admin/edit_embedded.php:5
-#@ mailerlite
 msgid "Edit webform"
 msgstr "Redaguoti integruojamą formą"
 
+# @ mailerlite
 #: include/templates/admin/settings.php:5
-#@ mailerlite
 msgid "Plugin settings"
 msgstr "Įskiepio nustatymai"
 
+# @ mailerlite
 #: include/templates/common/tiny_mce.php:13
-#@ mailerlite
-msgid "Select form from list below, and hit \"Add Shortcode\" to add the shortcode to your post!"
-msgstr "Pasirinkite formą iš žemiau esančio sąrašo ir paspauskite \"Pridėti trumpinį\"."
+msgid ""
+"Select form from list below, and hit \"Add Shortcode\" to add the shortcode "
+"to your post!"
+msgstr ""
+"Pasirinkite formą iš žemiau esančio sąrašo ir paspauskite \"Pridėti trumpinį"
+"\"."
 
+# @ mailerlite
 #: include/templates/forms/custom_form.php:20
-#@ mailerlite
 msgid "Please wait..."
 msgstr "Palaukite..."
 
+# @ mailerlite
 #: include/templates/forms/custom_form.php:28
-#@ mailerlite
-msgid "Thank you for subscription!"
+msgid "Thank you for signup!"
 msgstr "Dekojame už prenumeratą!"
 
+# @ mailerlite
 #: include/templates/common/tiny_mce.php:24
-#@ mailerlite
 msgid "Add Shortcode"
 msgstr "Pridėti trumpinį"
-

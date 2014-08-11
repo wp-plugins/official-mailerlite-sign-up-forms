@@ -31,7 +31,7 @@
                                 <tbody>
                                     <tr>
                                         <th><label for="form_title"><?php _e('Form title', 'mailerlite'); ?></label></th>
-                                        <td><input type="text" name="form_title" size="30" maxlength="255" value="<?php echo $form->data['title']; ?>" id="form_title"> <span class="description"><strong><?php echo __('Example:', 'mailerlite'); ?></strong> <?php echo __("Newsletter subscription!", 'mailerlite'); ?></span></td>
+                                        <td><input type="text" name="form_title" size="30" maxlength="255" value="<?php echo $form->data['title']; ?>" id="form_title"> <span class="description"><strong><?php echo __('Example:', 'mailerlite'); ?></strong> <?php echo __("Newsletter signup!", 'mailerlite'); ?></span></td>
                                     </tr>
                                     <tr>
                                         <th><label for="form_description"><?php _e('Form description', 'mailerlite'); ?></label></th>

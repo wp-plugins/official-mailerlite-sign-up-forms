@@ -25,7 +25,7 @@
                 <input type="hidden" name="action" value="mailerlite_subscribe_form" />
             </div>
             <div class="mailerlite-form-response">
-                <h4><?php _e('Thank you for subscription!', 'mailerlite'); ?></h4>
+                <h4><?php _e('Thank you for signup!', 'mailerlite'); ?></h4>
             </div>
         </form>
     </div>

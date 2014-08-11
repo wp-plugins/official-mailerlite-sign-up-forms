@@ -2,7 +2,7 @@
 <?php include_once ('header.php'); ?>
 
 <div class="wrap columns-2 dd-wrap">
-    <h2><?php echo __('Subscription forms', 'mailerlite'); ?> <a href="<?php echo admin_url( 'admin.php?page=mailerlite_main&view=create' ); ?>" class="add-new-h2"><?php _e('Add New', 'mailerlite'); ?></a></h2>
+    <h2><?php echo __('Signup forms', 'mailerlite'); ?> <a href="<?php echo admin_url( 'admin.php?page=mailerlite_main&view=create' ); ?>" class="add-new-h2"><?php _e('Add New', 'mailerlite'); ?></a></h2>
     <div id="poststuff" class="metabox-holder has-right-sidebar">
         <?php include("sidebar.php"); ?>
         <div id="post-body">
@@ -39,8 +39,7 @@
                 <?php else: ?>
                     <div class="postbox mailerlite-empty-list">
                         <div class="inside mailerlite-text-center">
-                            <h1><?php _e('There is no subscription forms created yet!', 'mailerlite'); ?></h1>
-                            <a href="<?php echo admin_url( 'admin.php?page=mailerlite_main&view=create' ); ?>" class="button-large button-primary"><?php _e('Create subscription form', 'mailerlite'); ?></a>
+                            <a href="<?php echo admin_url( 'admin.php?page=mailerlite_main&view=create' ); ?>" class="button-large button-primary"><?php _e('Add signup form', 'mailerlite'); ?></a>
                         </div>
                     </div>
                 <?php endif; ?>

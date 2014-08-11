@@ -5,7 +5,7 @@
         <?php include("sidebar.php"); ?>
         <div id="post-body">
             <div id="post-body-content">
-                <p><?php echo __('Hi there! You will be able to create awesome subscription forms, but first we need your MailerLite API key!', 'mailerlite'); ?></p>
+                <p><?php echo __('Hi there! You will be able to create awesome signup forms, but first we need your MailerLite API key!', 'mailerlite'); ?></p>
                 <?php if($mailerlite_error): ?>
                     <div class="error">
                         <p><?php echo $mailerlite_error; ?></p>

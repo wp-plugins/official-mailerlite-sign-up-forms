@@ -14,7 +14,7 @@
                             <p>
                                 <label for="form_type_custom" class="selectit">
                                     <input id="form_type_custom" type="radio" name="form_type" value="1" checked="checked">
-                                    <?php echo __('Custom subscription form', 'mailerlite'); ?>
+                                    <?php echo __('Custom signup form', 'mailerlite'); ?>
                                 </label>
                             </p>
                             <p>
