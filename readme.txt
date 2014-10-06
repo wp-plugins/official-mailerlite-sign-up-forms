@@ -3,8 +3,8 @@ Contributors: mailerlite
 Donate link: https://www.mailerlite.com/
 Tags: mailerlite, newsletter, subscribe, form, webform
 Requires at least: 3.0.1
-Tested up to: 3.9
-Stable tag: 1.0.4
+Tested up to: 4.0
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -128,6 +128,8 @@ Add your custom CSS rules to the end of your theme stylesheet, /wp-content/theme
 
 == Changelog ==
 
+= 1.0.5 =
+* Fix for WP 4.0
 = 1.0.4 =
 * Subscribe button update
 = 1.0.3 =
@@ -141,6 +143,8 @@ Add your custom CSS rules to the end of your theme stylesheet, /wp-content/theme
 
 == Upgrade Notice ==
 
+= 1.0.5 =
+* Fix for WP 4.0
 = 1.0.4 =
 * Subscribe button update
 = 1.0.3 =
