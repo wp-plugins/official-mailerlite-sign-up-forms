@@ -19,7 +19,7 @@
                 <?php endforeach; ?>
                 <div class="mailerlite-form-loader"><?php _e('Please wait...', 'mailerlite'); ?></div>
                 <div class="mailerlite-subscribe-button-container">
-                    <input class="mailerlite-subscribe-submit" type="submit" value="Subscribe" />
+                    <input class="mailerlite-subscribe-submit" type="submit" value="<?php echo $form_data['button']; ?>" />
                 </div>
                 <input type="hidden" name="form_id" value="<?php echo $form_id; ?>" />
                 <input type="hidden" name="action" value="mailerlite_subscribe_form" />

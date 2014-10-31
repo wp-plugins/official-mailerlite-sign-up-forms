@@ -117,12 +117,22 @@ class MailerLite_Form {
      */
     public static function add_jquery_validation_libraries() {
 
-        wp_register_script('google-hosted-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false);
+        if ( !wp_script_is('jquery') && !wp_script_is('google-hosted-jquery') ) {
+            wp_register_script('google-hosted-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false);
+            wp_enqueue_script('google-hosted-jquery');
+        }
 
-        wp_register_script('jquery-validation-plugin', 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js', array('google-hosted-jquery'));
+        if ( !wp_script_is('jquery-validation-plugin') && wp_script_is('jquery') )
+        {
+            wp_register_script('jquery-validation-plugin', 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js', array('jquery'));
+        }
+        else if ( !wp_script_is('jquery-validation-plugin') && wp_script_is('google-hosted-jquery') )
+        {
+            wp_register_script('jquery-validation-plugin', 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js', array('google-hosted-jquery'));
+        }
 
-        wp_enqueue_script('google-hosted-jquery');
         wp_enqueue_script('jquery-validation-plugin');
+
     }
 }
 
