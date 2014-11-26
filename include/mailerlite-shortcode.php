@@ -7,8 +7,6 @@ class MailerLite_Shortcode {
      */
     public static function init() {
 
-        if ( ! current_user_can( 'edit_posts' ) ) return;
-
         add_shortcode( 'mailerlite_form', array('MailerLite_Shortcode', 'mailerlite_generate_shortcode') );
 
         add_action( 'wp_ajax_nopriv_mailerlite_tinymce_window', array('MailerLite_Shortcode', 'mailerlite_tinymce_window') );
