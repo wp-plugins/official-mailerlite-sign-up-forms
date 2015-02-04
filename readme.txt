@@ -8,7 +8,7 @@ Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add newsletter sign up forms to your WordPresss site. Subscribers will be saved directly to your MailerLite account. Super easy to set up!
+Add newsletter sign up forms to your WordPress site. Subscribers will be saved directly to your MailerLite account. Super easy to set up!
 
 == Description ==
 
@@ -16,7 +16,7 @@ Add newsletter sign up forms to your WordPresss site. Subscribers will be saved 
 
 The Official MailerLite Sign Up Form plugin makes it easy to grow your newsletter subscriber list. Use the plugin to add newsletter sign up form to your Wordpress blog or website and automatically integrate it with your MailerLite account.
 
-If you don't have MailerLite account yet, you can signup for a FREE trial here.
+If you don't have MailerLite account yet, [you can signup for a FREE trial here](https://www.mailerlite.com/).
 
 Once you activate the plugin, you'll be able to select and add any of webforms you have in your MailerLite account or create a new webform. Place the webform in the sidebar using widget or put it enywhere in your post with a shortcode.
 
@@ -93,9 +93,8 @@ if( function_exists( 'load_mailerlite_form' ) ) {
 You can use CSS rules to style the sign-up form, use the following CSS selectors to target the various form elements.
 
 Every form can be different, because element ID of form is:
-`
-#mailerlite-form_(your_form_id)
-`
+
+`#mailerlite-form_(your_form_id)`
 
 Elements of form can be styled.
 
