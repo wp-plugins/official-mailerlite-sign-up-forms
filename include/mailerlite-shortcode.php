@@ -11,7 +11,7 @@ class MailerLite_Shortcode
 
         add_shortcode(
             'mailerlite_form', array('MailerLite_Shortcode',
-                                     'mailerlite_generate_shortcode')
+                'mailerlite_generate_shortcode')
         );
 
         add_action(
@@ -23,15 +23,14 @@ class MailerLite_Shortcode
             array('MailerLite_Shortcode', 'mailerlite_tinymce_window')
         );
 
-        if (get_user_option('rich_editing'))
-        {
+        if (get_user_option('rich_editing')) {
             add_filter(
                 'mce_buttons', array('MailerLite_Shortcode',
-                                     'mailerlite_register_button')
+                    'mailerlite_register_button')
             );
             add_filter(
                 'mce_external_plugins', array('MailerLite_Shortcode',
-                                              'mailerlite_add_tinymce_plugin')
+                    'mailerlite_add_tinymce_plugin')
             );
         }
 
@@ -39,6 +38,9 @@ class MailerLite_Shortcode
 
     /**
      * Add tinymce button to toolbar
+     *
+     * @param $buttons
+     * @return mixed
      */
     public static function mailerlite_register_button($buttons)
     {
@@ -51,6 +53,9 @@ class MailerLite_Shortcode
 
     /**
      * Register tinymce plugin
+     *
+     * @param $plugin_array
+     * @return mixed
      */
     public static function mailerlite_add_tinymce_plugin($plugin_array)
     {
@@ -67,8 +72,7 @@ class MailerLite_Shortcode
     {
         global $wpdb, $forms;
 
-        if ( ! current_user_can('edit_posts'))
-        {
+        if (!current_user_can('edit_posts')) {
             return;
         }
 
@@ -77,7 +81,7 @@ class MailerLite_Shortcode
         );
 
         include(MAILERLITE_PLUGIN_DIR
-                . 'include/templates/common/tiny_mce.php');
+            . 'include/templates/common/tiny_mce.php');
 
         exit;
     }

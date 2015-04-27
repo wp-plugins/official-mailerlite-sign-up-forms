@@ -1,42 +1,40 @@
 <?php
-	
-	require_once dirname(__FILE__).'/base/ML_Rest.php';
-	
-	class ML_Lists extends ML_Rest
-	{
-		function ML_Lists( $api_key )
-		{	
-			$this->name = 'lists';
 
-			parent::__construct($api_key);
-		}
+require_once dirname(__FILE__) . '/base/ML_Rest.php';
 
-		function getActive( )
-		{
-			$this->path .= 'active/';
+class ML_Lists extends ML_Rest
+{
+    function ML_Lists($api_key)
+    {
+        $this->name = 'lists';
 
-			return $this->execute( 'GET' );
-		}
+        parent::__construct($api_key);
+    }
 
-		function getUnsubscribed( )
-		{
-			$this->path .= 'unsubscribed/';
+    function getActive()
+    {
+        $this->path .= 'active/';
 
-			return $this->execute( 'GET' );
-		}
+        return $this->execute('GET');
+    }
 
-		function getBounced( )
-		{			
-			$this->path .= 'bounced/';
+    function getUnsubscribed()
+    {
+        $this->path .= 'unsubscribed/';
 
-			return $this->execute( 'GET' );
-		}
+        return $this->execute('GET');
+    }
 
-        function getFields( )
-        {
-            $this->path .= 'fields/';
-            return $this->execute( 'GET' );
-        }
-	}
+    function getBounced()
+    {
+        $this->path .= 'bounced/';
 
-?>
+        return $this->execute('GET');
+    }
+
+    function getFields()
+    {
+        $this->path .= 'fields/';
+        return $this->execute('GET');
+    }
+}

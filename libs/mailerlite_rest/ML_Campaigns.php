@@ -1,57 +1,55 @@
 <?php
-	
-	require_once dirname(__FILE__).'/base/ML_Rest.php';
-	
-	class ML_Campaigns extends ML_Rest
-	{
-		function ML_Campaigns( $api_key )
-		{	
-			$this->name = 'campaigns';
 
-			parent::__construct($api_key);
-		}
+require_once dirname(__FILE__) . '/base/ML_Rest.php';
 
-		function getRecipients( )
-		{
-			$this->path .= 'recipients/';
+class ML_Campaigns extends ML_Rest
+{
+    function ML_Campaigns($api_key)
+    {
+        $this->name = 'campaigns';
 
-			return $this->execute( 'GET' );
-		}
+        parent::__construct($api_key);
+    }
 
-		function getOpens( )
-		{
-			$this->path .= 'opens/';
+    function getRecipients()
+    {
+        $this->path .= 'recipients/';
 
-			return $this->execute( 'GET' );
-		}
+        return $this->execute('GET');
+    }
 
-		function getClicks( )
-		{
-			$this->path .= 'clicks/';
+    function getOpens()
+    {
+        $this->path .= 'opens/';
 
-			return $this->execute( 'GET' );
-		}
+        return $this->execute('GET');
+    }
 
-		function getUnsubscribes( )
-		{
-			$this->path .= 'unsubscribes/';
+    function getClicks()
+    {
+        $this->path .= 'clicks/';
 
-			return $this->execute( 'GET' );
-		}
+        return $this->execute('GET');
+    }
 
-		function getBounces( )
-		{
-			$this->path .= 'bounces/';
+    function getUnsubscribes()
+    {
+        $this->path .= 'unsubscribes/';
 
-			return $this->execute( 'GET' );
-		}
+        return $this->execute('GET');
+    }
 
-		function getJunk( )
-		{
-			$this->path .= 'junks/';
+    function getBounces()
+    {
+        $this->path .= 'bounces/';
 
-			return $this->execute( 'GET' );
-		}
-	}
+        return $this->execute('GET');
+    }
 
-?>
+    function getJunk()
+    {
+        $this->path .= 'junks/';
+
+        return $this->execute('GET');
+    }
+}
