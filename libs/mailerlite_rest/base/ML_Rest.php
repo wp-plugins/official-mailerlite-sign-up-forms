@@ -1,61 +1,59 @@
 <?php
-	
-	require_once dirname(__FILE__) . '/ML_Rest_Base.php';
-	
-	class ML_Rest extends ML_Rest_Base
-	{
-		var $name = '';
 
-		var $id = null;
+require_once dirname(__FILE__) . '/ML_Rest_Base.php';
 
-		function __construct( $api_key )
-		{	
-			parent::__construct();
+class ML_Rest extends ML_Rest_Base
+{
+    var $name = '';
 
-			$this->apiKey = $api_key;
+    var $id = null;
 
-			$this->path = $this->url . $this->name . '/';
-		}
+    function __construct($api_key)
+    {
+        parent::__construct();
 
-		function setId( $id )
-		{
-			$this->id = $id;
+        $this->apiKey = $api_key;
 
-			if ( $this->id )
-				$this->path = $this->url . $this->name . '/' . $id . '/';
-			else
-				$this->path = $this->url . $this->name . '/';
+        $this->path = $this->url . $this->name . '/';
+    }
 
-			return $this;
-		}
+    function setId($id)
+    {
+        $this->id = $id;
 
-		function getAll( )
-		{
-			return $this->execute( 'GET' );
-		}
+        if ($this->id)
+            $this->path = $this->url . $this->name . '/' . $id . '/';
+        else
+            $this->path = $this->url . $this->name . '/';
 
-		function get( $data = null )
-		{
-			if (!$this->id)
-				throw new InvalidArgumentException('ID is not set.');
+        return $this;
+    }
 
-			return $this->execute( 'GET' );
-		}
+    function getAll()
+    {
+        return $this->execute('GET');
+    }
 
-		function add( $data = null )
-		{
-			return $this->execute( 'POST', $data );
-		}
+    function get($data = null)
+    {
+        if (!$this->id)
+            throw new InvalidArgumentException('ID is not set.');
 
-		function put( $data = null)
-		{
-			return $this->execute( 'PUT', $data );
-		}
+        return $this->execute('GET');
+    }
 
-		function remove( $data = null )
-		{
-			return $this->execute( 'DELETE' );
-		}
-	}
+    function add($data = null)
+    {
+        return $this->execute('POST', $data);
+    }
 
-?>
+    function put($data = null)
+    {
+        return $this->execute('PUT', $data);
+    }
+
+    function remove($data = null)
+    {
+        return $this->execute('DELETE');
+    }
+}

@@ -24,7 +24,7 @@ class MailerLite_Widget extends WP_Widget
      *
      * @see WP_Widget::widget()
      *
-     * @param array $args     Widget arguments.
+     * @param array $args Widget arguments.
      * @param array $instance Saved values from database.
      */
     public function widget($args, $instance)
@@ -32,16 +32,15 @@ class MailerLite_Widget extends WP_Widget
         global $wpdb;
 
         $form_id = isset($instance['mailerlite_form_id'])
-                   && intval(
+        && intval(
             $instance['mailerlite_form_id']
         ) ? $instance['mailerlite_form_id'] : 0;
-        $form    = $wpdb->get_row(
+        $form = $wpdb->get_row(
             "SELECT * FROM " . $wpdb->prefix . "mailerlite_forms WHERE id = "
             . $form_id
         );
 
-        if (isset($form->data))
-        {
+        if (isset($form->data)) {
             $form_data = unserialize($form->data);
 
             echo $args['before_widget'];
@@ -73,12 +72,9 @@ class MailerLite_Widget extends WP_Widget
             . "mailerlite_forms ORDER BY time DESC"
         );
 
-        if (isset($instance['mailerlite_form_id']))
-        {
+        if (isset($instance['mailerlite_form_id'])) {
             $id = $instance['mailerlite_form_id'];
-        }
-        else
-        {
+        } else {
             $id = 0;
         }
         ?>
@@ -115,7 +111,7 @@ class MailerLite_Widget extends WP_Widget
     {
         $instance = array();
         $instance['mailerlite_form_id']
-                  = ( ! empty($new_instance['mailerlite_form_id']))
+            = (!empty($new_instance['mailerlite_form_id']))
             ? strip_tags($new_instance['mailerlite_form_id']) : '';
 
         return $instance;

@@ -7,7 +7,7 @@ class MailerLite_Admin
 {
 
     private static $initiated = false;
-    private static $api_key   = false;
+    private static $api_key = false;
 
     /**
      * Initialization method
@@ -21,7 +21,7 @@ class MailerLite_Admin
 
         self::$api_key = get_option('mailerlite_api_key');
 
-        if ( ! self::$initiated) {
+        if (!self::$initiated) {
             self::init_hooks();
         }
 
@@ -42,18 +42,18 @@ class MailerLite_Admin
 
         add_action(
             'admin_init',
-            ['MailerLite_Admin', 'mailerlite_admin_init_setting']
+            array('MailerLite_Admin', 'mailerlite_admin_init_setting')
         );
         add_action(
-            'admin_menu', [
+            'admin_menu', array(
                 'MailerLite_Admin',
                 'mailerlite_admin_generate_menu_link'
-            ]
+            )
         );
 
         wp_register_style(
             'mailerlite.css',
-            MAILERLITE_PLUGIN_URL . '/assets/css/mailerlite.css', [],
+            MAILERLITE_PLUGIN_URL . '/assets/css/mailerlite.css', array(),
             MAILERLITE_VERSION
         );
         wp_enqueue_style('mailerlite.css');
@@ -73,13 +73,13 @@ class MailerLite_Admin
         add_submenu_page(
             'mailerlite_main', __('Forms', 'mailerlite'),
             __('Signup forms', 'mailerlite'), 'manage_options',
-            'mailerlite_main', ['MailerLite_Admin', 'mailerlite_main']
+            'mailerlite_main', array('MailerLite_Admin', 'mailerlite_main')
         );
         add_submenu_page(
             'mailerlite_main', __('Settings', 'mailerlite'),
             __('Settings', 'mailerlite'), 'manage_options',
             'mailerlite_settings',
-            ['MailerLite_Admin', 'mailerlite_settings']
+            array('MailerLite_Admin', 'mailerlite_settings')
         );
     }
 
@@ -114,7 +114,7 @@ class MailerLite_Admin
         self::mailerlite_api_key_require();
 
         $api_key = self::$api_key;
-        $result  = '';
+        $result = '';
 
         //Create new signup form view
         if (isset($_GET['view']) && $_GET['view'] == 'create') {
@@ -131,8 +131,8 @@ class MailerLite_Admin
             }
 
             $ML_Webforms = new ML_Webforms($api_key);
-            $webforms    = $ML_Webforms->getAll();
-            $webforms    = json_decode($webforms);
+            $webforms = $ML_Webforms->getAll();
+            $webforms = json_decode($webforms);
 
             include(MAILERLITE_PLUGIN_DIR
                 . 'include/templates/admin/create.php');
@@ -160,21 +160,21 @@ class MailerLite_Admin
                     );
 
                     $ML_Lists = new ML_Lists($api_key);
-                    $lists    = $ML_Lists->getAll();
-                    $lists    = json_decode($lists);
+                    $lists = $ML_Lists->getAll();
+                    $lists = json_decode($lists);
 
                     $fields = $ML_Lists->setId($lists->Results[0]->id)
                         ->getFields();
                     $fields = json_decode($fields);
 
                     if (isset($_POST['save_custom_signup_form'])) {
-                        $form_name        = isset($_POST['form_name'])
+                        $form_name = isset($_POST['form_name'])
                         && $_POST['form_name'] != ''
                             ? sanitize_text_field($_POST['form_name'])
                             : __(
                                 'Subscribe for newsletter!', 'mailerlite'
                             );
-                        $form_title       = isset($_POST['form_title'])
+                        $form_title = isset($_POST['form_title'])
                         && $_POST['form_title'] != ''
                             ? sanitize_text_field($_POST['form_title'])
                             : __(
@@ -186,7 +186,7 @@ class MailerLite_Admin
                             : __(
                                 'Just simple MailerLite form!', 'mailerlite'
                             );
-                        $button_name      = isset($_POST['button_name'])
+                        $button_name = isset($_POST['button_name'])
                         && $_POST['button_name'] != ''
                             ? sanitize_text_field($_POST['button_name'])
                             : __(
@@ -196,13 +196,13 @@ class MailerLite_Admin
                         $selected_fields = isset($_POST['form_selected_field'])
                         && is_array(
                             $_POST['form_selected_field']
-                        ) ? $_POST['form_selected_field'] : [];
-                        $field_titles    = isset($_POST['form_field'])
+                        ) ? $_POST['form_selected_field'] : array();
+                        $field_titles = isset($_POST['form_field'])
                         && is_array(
                             $_POST['form_field']
-                        ) ? $_POST['form_field'] : [];
+                        ) ? $_POST['form_field'] : array();
 
-                        if ( ! isset($field_titles['email'])
+                        if (!isset($field_titles['email'])
                             || $field_titles['email'] == ''
                         ) {
                             $field_titles['email'] = __('Email', 'mailerlite');
@@ -211,9 +211,9 @@ class MailerLite_Admin
                         $form_lists = isset($_POST['form_lists'])
                         && is_array(
                             $_POST['form_lists']
-                        ) ? $_POST['form_lists'] : [];
+                        ) ? $_POST['form_lists'] : array();
 
-                        $prepared_fields = [];
+                        $prepared_fields = array();
 
                         //Force to use email
                         $prepared_fields['email'] = $field_titles['email'];
@@ -225,23 +225,23 @@ class MailerLite_Admin
                             }
                         }
 
-                        $form_data = [
-                            'title'       => $form_title,
+                        $form_data = array(
+                            'title' => $form_title,
                             'description' => wpautop($form_description, true),
-                            'button'      => $button_name,
-                            'lists'       => $form_lists,
-                            'fields'      => $prepared_fields
-                        ];
+                            'button' => $button_name,
+                            'lists' => $form_lists,
+                            'fields' => $prepared_fields
+                        );
 
                         $wpdb->update(
                             $wpdb->prefix . 'mailerlite_forms',
-                            [
+                            array(
                                 'name' => $form_name,
                                 'data' => serialize($form_data)
-                            ],
-                            ['id' => $form_id],
-                            [],
-                            ['%d']
+                            ),
+                            array('id' => $form_id),
+                            array(),
+                            array('%d')
                         );
 
                         $form->data = $form_data;
@@ -253,17 +253,17 @@ class MailerLite_Admin
                         . 'include/templates/admin/edit_custom.php');
                 } else if ($form->type == 2) {
                     $ML_Webforms = new ML_Webforms($api_key);
-                    $webforms    = $ML_Webforms->getAll();
-                    $webforms    = json_decode($webforms);
+                    $webforms = $ML_Webforms->getAll();
+                    $webforms = json_decode($webforms);
 
-                    $parsed_webforms = [];
+                    $parsed_webforms = array();
 
                     foreach ($webforms->Results as $webform) {
                         $parsed_webforms[$webform->id] = $webform->code;
                     }
 
                     if (isset($_POST['save_embedded_signup_form'])) {
-                        $form_name       = isset($_POST['form_name'])
+                        $form_name = isset($_POST['form_name'])
                         && $_POST['form_name'] != ''
                             ? sanitize_text_field($_POST['form_name'])
                             : __(
@@ -273,20 +273,20 @@ class MailerLite_Admin
                         && isset($parsed_webforms[$_POST['form_webform_id']])
                             ? $_POST['form_webform_id'] : 0;
 
-                        $form_data = [
-                            'id'   => $form_webform_id,
+                        $form_data = array(
+                            'id' => $form_webform_id,
                             'code' => $parsed_webforms[$form_webform_id]
-                        ];
+                        );
 
                         $wpdb->update(
                             $wpdb->prefix . 'mailerlite_forms',
-                            [
+                            array(
                                 'name' => $form_name,
                                 'data' => serialize($form_data)
-                            ],
-                            ['id' => $form_id],
-                            [],
-                            ['%d']
+                            ),
+                            array('id' => $form_id),
+                            array(),
+                            array('%d')
                         );
 
                         $form->data = $form_data;
@@ -312,7 +312,7 @@ class MailerLite_Admin
             && absint($_GET['id'])
         ) {
             $wpdb->delete(
-                $wpdb->prefix . 'mailerlite_forms', ['id' => $_GET['id']]
+                $wpdb->prefix . 'mailerlite_forms', array('id' => $_GET['id'])
             );
             wp_redirect('admin.php?page=mailerlite_main');
         } //Signup forms list
@@ -348,7 +348,7 @@ class MailerLite_Admin
         global $mailerlite_error;
 
         if (function_exists('current_user_can')
-            && ! current_user_can(
+            && !current_user_can(
                 'manage_options'
             )
         ) {
@@ -379,36 +379,36 @@ class MailerLite_Admin
     {
         global $wpdb;
 
-        $form_type = in_array($data['form_type'], [1, 2])
+        $form_type = in_array($data['form_type'], array(1, 2))
             ? $data['form_type'] : 1;
 
         if ($form_type == 1) {
             $form_name = __('New custom signup form', 'mailerlite');
-            $form_data = [
-                'title'       => __('Newsletter signup', 'mailerlite'),
+            $form_data = array(
+                'title' => __('Newsletter signup', 'mailerlite'),
                 'description' => __(
                     'Just simple MailerLite form!', 'mailerlite'
                 ),
-                'button'      => __('Subscribe', 'mailerlite'),
-                'lists'       => [],
-                'fields'      => ['email' => __('Email', 'mailerlite')]
-            ];
+                'button' => __('Subscribe', 'mailerlite'),
+                'lists' => array(),
+                'fields' => array('email' => __('Email', 'mailerlite'))
+            );
         } else {
             $form_name = __('New embedded signup form', 'mailerlite');
-            $form_data = [
-                'id'   => 0,
+            $form_data = array(
+                'id' => 0,
                 'code' => 0
-            ];
+            );
         }
 
         $wpdb->insert(
             $wpdb->prefix . 'mailerlite_forms',
-            [
+            array(
                 'name' => $form_name,
                 'time' => date('Y-m-d h:i:s'),
                 'type' => $form_type,
                 'data' => serialize($form_data)
-            ]
+            )
         );
     }
 }

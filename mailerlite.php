@@ -4,7 +4,7 @@
  * Plugin Name: Official MailerLite Sign Up Forms
  * Description: Official MailerLite Sign Up Forms plugin for WordPress. Ability
  * to embed MailerLite webforms and create custom ones just with few clicks.
- * Version: 1.0.9
+ * Version: 1.0.10
  * Author: MailerGroup
  * Author URI: https://www.mailerlite.com
  * License: GPLv2 or later
@@ -28,7 +28,7 @@
 define('MAILERLITE_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('MAILERLITE_PLUGIN_URL', plugins_url('', __FILE__));
 
-define('MAILERLITE_VERSION', '1.0.9');
+define('MAILERLITE_VERSION', '1.0.10');
 
 function mailerlite_load_plugin_textdomain()
 {
@@ -67,7 +67,7 @@ function register_mailerlite_styles()
 {
     wp_register_style(
         'mailerlite_forms.css', MAILERLITE_PLUGIN_URL
-                                . '/assets/css/mailerlite_forms.css', array(),
+        . '/assets/css/mailerlite_forms.css', array(),
         MAILERLITE_VERSION
     );
     wp_enqueue_style('mailerlite_forms.css');
@@ -75,8 +75,7 @@ function register_mailerlite_styles()
 
 add_action('wp_enqueue_scripts', 'register_mailerlite_styles');
 
-if (is_admin())
-{
+if (is_admin()) {
     require_once(MAILERLITE_PLUGIN_DIR . 'include/mailerlite-admin.php');
     add_action('init', array('MailerLite_Admin', 'init'));
 }

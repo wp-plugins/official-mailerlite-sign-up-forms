@@ -127,6 +127,8 @@ Add your custom CSS rules to the end of your theme stylesheet, /wp-content/theme
 
 == Changelog ==
 
+= 1.0.10 =
+* Some code refactor, array fixes for <5.4
 = 1.0.9 =
 * Curl safe mode fix
 = 1.0.8 =
@@ -150,6 +152,8 @@ Add your custom CSS rules to the end of your theme stylesheet, /wp-content/theme
 
 == Upgrade Notice ==
 
+= 1.0.10 =
+* Some code refactor, array fixes for <5.4
 = 1.0.9 =
 * Curl safe mode fix
 = 1.0.8 =
